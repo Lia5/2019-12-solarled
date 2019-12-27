@@ -1,0 +1,18 @@
+.header {
+    padding: 17px 0;
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__social {
+        a {
+            padding: 30px;
+            font-weight: 500;
+            color: #333;
+        }
+    }
+}
+
+
+
+//header

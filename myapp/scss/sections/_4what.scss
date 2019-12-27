@@ -1,0 +1,41 @@
+.what {
+    padding-bottom: 210px;
+    .wrap {
+        display: flex;
+    }
+    &__body {
+        width: 50%;
+        padding-left: 7%;
+        padding-right: 9%;
+    }
+    &__title {
+        padding-left: 90px;
+        position: relative;
+        &:before {
+            content: url('../img/icons/icon-solar.png');
+            position: absolute;
+            top: 15px;
+            left: 0;
+        }
+    }
+    &__descr {
+        margin-top: 38px;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 50%;
+        font-family: "NotoSans", Arial, Helvetica, sans-serif;
+        padding-top: 40px;
+        padding-left: 5%;
+    }
+    &__item {
+        width: 42%;
+    }
+    &__num {
+        font-family: "Raleway", Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        color: #ffc905;
+    }
+}

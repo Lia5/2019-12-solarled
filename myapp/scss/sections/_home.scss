@@ -1,0 +1,44 @@
+.home {
+    position: relative;
+    background: url('../img/home-bg.jpg') no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 129px 0 100px;
+    &:before {
+        content: url('../img/home-bg-right.png');
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &:after {
+        content: url('../img/roof.png');
+        position: absolute;
+        bottom: -8px;
+        right: 0;
+    }
+    .main-title {
+        width: 72%;
+    }
+    &__body {
+        position: relative;
+        display: flex;
+    }
+    &__roof {
+        width: 28%;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        font-weight: 500;
+        margin-top: 81px;
+        font-size: 16px;
+    }
+    &__item {
+        width: 50%;
+        padding: 20px 7% 20px 0;
+    }
+    &__title {
+        color: $accent;
+    }
+}

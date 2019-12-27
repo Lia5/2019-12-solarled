@@ -1,0 +1,158 @@
+
+@import "tools/_normalize.scss";
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	font-size: 18px;
+	font-weight: 400;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.5;
+	font-family: "Raleway", Arial, Helvetica, sans-serif;
+	overflow-x: hidden;
+	color: $text;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+.wrap {
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 12px;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+	color: $text;
+	-webkit-transition: all.6s ease; 
+	-moz-transition: all.6s ease;
+	-ms-transition: all.6s ease; 
+	-o-transition: all.6s ease; 
+	transition: all.6s ease;
+	outline:none !important;
+	border: none;
+	&:hover {
+		outline:none;
+	};
+	&:active {
+		outline:none;
+		-webkit-transition: all.1s ease; 
+		-moz-transition: all.1s ease;
+		-ms-transition: all.1s ease; 
+		-o-transition: all.1s ease; 
+		transition: all.1s ease;
+	};
+}
+ul,li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+// .primary-text {
+
+// 	font-size: 10px;
+// 	letter-spacing: 4px;
+// }
+.main-title {
+	font-weight: 800;
+	font-size: 50px;
+	line-height: 1.2;
+	span {
+		display: block;
+		color: $accent2;
+	}
+}
+.title {
+	font-weight: 700;
+	font-size: 35px;
+	line-height: 45px;
+	span {
+		color: #1f7a83;
+		display: block;
+	}
+}
+// .subtitle {
+// 	font-size: 12px;
+// 	color: #000;
+// }
+.btn {
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 700;;
+	font-size: 16px;
+	line-height: 27px;
+	padding: 15px 45px;
+	transition: 0.5s;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	min-width: 255px;
+	text-align: center;
+	border-radius: 5px;
+	&--orange {
+		background: #ffc905;
+		box-shadow: 9px 8px 24px -8px rgba(208, 142, 0, 0.2);
+
+	}
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.5);
+		&:before, &:after {
+			left: 0;
+			top: 0;	
+			right: 0;
+			bottom: 0;
+			height: auto;
+		}
+	}
+}
+
+@import "sections/header"; 
+@import "sections/home"; 
+@import "sections/1solution"; 
+
+
+@import "sections/4what";
+@import "sections/5calc";
+
+
+
+@import "sections/footer"; 
+
+@import "media"; // Always at the end
