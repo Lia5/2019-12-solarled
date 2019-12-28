@@ -121,24 +121,38 @@ ul,li {
 	padding: 15px 45px;
 	transition: 0.5s;
 	cursor: pointer;
-	background: transparent;
+	color: #075057;
+	background: #fff;
+	box-shadow: 9px 8px 24px -8px rgba(7, 80, 87, 0.11);
 	border: none;
 	min-width: 255px;
 	text-align: center;
 	border-radius: 5px;
+	&:hover {
+		background: #e0e6e7;
+	}
+	&:active {
+		background: #bcd7da;
+	}
 	&--orange {
 		background: #ffc905;
 		box-shadow: 9px 8px 24px -8px rgba(208, 142, 0, 0.2);
-
+		&:hover {
+			background: #ffd53b;
+		}
+		&:active {
+			background: #ffb400;
+		}
 	}
-	&:hover {
-		background-color: rgba(255, 255, 255, 0.5);
-		&:before, &:after {
-			left: 0;
-			top: 0;	
-			right: 0;
-			bottom: 0;
-			height: auto;
+	&--green {
+		color: #fff;
+		background: #075057;
+		box-shadow: 11px 8px 24px -8px rgba(7, 80, 87, 0.11);
+		&:hover {
+			background: #187179;
+		}
+		&:active {
+			background: #187179;
 		}
 	}
 }
@@ -150,7 +164,9 @@ ul,li {
 
 @import "sections/4what";
 @import "sections/5calc";
-
+@import "sections/6credit";
+@import "sections/7time";
+@import "sections/8about";
 
 
 @import "sections/footer"; 

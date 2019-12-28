@@ -2,7 +2,7 @@
     background: url('../img/calc-bg.png') no-repeat;
     background-size: contain;
     background-position-y: bottom;
-    padding: 114px 0 548px;
+    padding: 114px 0 554px;
     
     &__head {
         display: flex;
@@ -47,7 +47,7 @@
     }
     &__item {
         text-align: center;
-        padding: 0 45px;
+        padding: 0 34px 19px;
         background: #fff;
         box-shadow: 0 8px 5px -8px rgba(7,80,87,0.04);
         .calc__name {
@@ -88,7 +88,7 @@
         }
     }
     &__line {
-        padding: 15px 25px;
+        padding: 17px 25px;
         margin-top: auto;
         &+.calc__line {
             border-top: 1px solid #5e5e5e;
@@ -97,8 +97,9 @@
             display: flex;
             flex-direction: column;
             margin-left: auto;
-            max-width: 222px;
-            padding-right: 50px;
+            max-width: 186px;
+            padding-right: 7px;
+            padding-bottom: 22px;
             .calc__line {
                 padding: 8px 0;
                 & + .calc__line {
@@ -123,10 +124,14 @@
         color: #075057;
     }
     &__value {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 600;
-        line-height: 29px;
+        line-height: 35px;
         color: #5e5e5e;
+        @media screen and (max-width: 500px) {
+            font-size: 16px;
+            line-height: 29px;
+        }
 
     }
     &__subname {
