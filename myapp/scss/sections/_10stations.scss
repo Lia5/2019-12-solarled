@@ -1,0 +1,110 @@
+.stations {
+    position: relative;
+    padding-top: 80px;
+    .wrap {
+        position: relative;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35%;
+        height: 100%;
+        background: #ffc905;
+        z-index: -1;
+    }
+    &__title {
+        padding-left: 15%;
+        margin-bottom: 60px;
+    }
+    &__item {
+        display: flex;
+    }
+    &__name {
+        position: relative;
+        font-size: 18px;
+        font-weight: 700;
+        color: #075057;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80%;
+            width: 276px;
+            height: 1px;
+            background-color: #075057;
+        }
+    }
+    &__slider {
+        margin-left: -12%;
+        width: 112%;
+    }
+    &__pic {
+        width: 47%;
+    }
+    &__descr {
+        width: 53%;
+        padding: 3% 2% 3% 5%;
+        font-size: 14px;
+        &-name {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        &-text {
+            margin-bottom: 16px;
+        }
+    }
+    &__name {
+        max-width: 333px;
+        margin-bottom: 46px;
+    }
+    &__points {
+        display: flex;
+        margin-bottom: 28px;
+    }
+    &__point {
+        margin-right: 64px;
+        &-name {
+            font-weight: 700;
+        }
+    }
+    .owl-nav {
+        margin-left: 36%;
+        position: absolute;
+        bottom: 60px;
+    }
+    .slider-counter {
+        font-size: 27px;
+        position: absolute;
+        bottom: 65px;
+        left: 48px;
+        margin-left: 29%;
+    }
+}
+
+.owl-prev {
+    transform: scale(-1, 1); 
+    margin-right: 77px;
+    &.disabled {
+        svg {
+            fill: #a9a9a9;
+        }
+    }
+    svg {
+        width: 29px;
+        fill: #357076;
+    }
+}
+.owl-next {
+    &.disabled {
+        svg {
+            fill: #a9a9a9;
+        }
+    }
+    svg {
+        width: 29px;
+        fill: #357076;
+    }
+}

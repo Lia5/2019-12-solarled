@@ -1,0 +1,76 @@
+.key {
+    padding-top: 136px;
+    padding-bottom: 160px;
+    background: #f8f8ff;
+    .wrap {
+        display: flex;
+    }
+    &__body {
+        width: 50%;
+        padding-left: 1%;
+    }
+    &__title {
+        padding-left: 90px;
+        padding-right: 5%;
+        position: relative;
+        &:before {
+            content: url('../img/icons/icon-power.png');
+            position: absolute;
+            top: 15px;
+            left: 0;
+        }
+    }
+    &__descr {
+        margin-top: 38px;
+        padding-left: 90px;
+    }
+    &__right {
+        width: 49%;
+        padding: 4% 0% 0 16%;  
+    }
+    &__about {
+        margin-bottom: 30px;
+    }
+    &__subtitle {
+        width: 100%;
+        font-weight: 800;
+        color: #075057;
+        text-align: center;
+        margin-top: 120px;
+        margin-bottom: 70px;
+    
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        font-family: "NotoSans", Arial, Helvetica, sans-serif;
+        background: #fff;
+        position: relative;
+        z-index: 1;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: -1;
+            transform: scale(1.05);
+        }
+    }
+    &__item {
+        width: 25%;
+        box-shadow: 0 8px 5px -8px rgba(7,80,87,.04);
+        margin-bottom: 118px;
+        &:nth-child(n+5) {
+            margin-bottom: 30px;
+        }
+    }
+    &__num {
+        font-family: "Raleway", Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        color: #ffc905;
+    }
+}

@@ -1,0 +1,60 @@
+.support {
+    &__qa {
+        position: relative;
+        overflow: hidden;
+        padding: 118px 0;
+        background: url('../img/green-bg.jpg');
+        &-text {
+            width: 50%;
+            padding: 0 3% 0 4%;
+            color: #fcfcfc;
+        }
+        .wrap {
+            padding-left: 9%;
+            display: flex;
+        }
+        &:before {
+            content: url('../img/sun-left.png');
+            position: absolute;
+            top: -90px;
+            left: 7%;
+        }
+        &+.wrap {
+            padding: 125px 0 190px;
+            max-width: 1229px;
+        }
+    }
+    &__title {
+        color: #fff;
+        width: 50%;
+        span {
+            color: #ffc905;
+        }
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__attention {
+        position: relative;
+        padding-left: 58px;
+        color: #075057;
+        font-weight: 500;
+        &:before {
+            content: url(../img/icons/support.png);
+            position: absolute;
+            top: 11px;
+            left: -13px;
+        }
+    }
+    &__text {
+        font-size: 14px;
+        width: 98%;
+        padding: 0 0 0 0;
+        svg {
+            width: 20px;
+            fill: #075057;
+        }
+    }
+}

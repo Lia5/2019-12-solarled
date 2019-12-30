@@ -1,0 +1,39 @@
+.reviews {
+    padding: 180px 0 103px;
+    &-wrap {
+        position: relative;
+        max-width: 1024px;
+    }
+    &__slider {
+        padding-top: 90px;
+        padding-left: 20%;
+    }
+    &__item {
+        display: flex;
+    }
+    &__pic {
+        min-width: 60px;
+    }
+    &__descr {
+        padding: 0 5% 5% 3%;
+    }
+    &__name {
+        font-weight: 800;
+        margin-bottom: 23px;
+    }
+    &__text {
+        font-size: 14px;
+    }
+    .owl-nav {
+        margin-left: 36%;
+        position: absolute;
+        top: -33px;
+        right: 0;
+    }
+    .slider-counter--reviews {
+        font-size: 27px;
+        position: absolute;
+        top: 95px;
+        right: 56px;
+    }
+}
