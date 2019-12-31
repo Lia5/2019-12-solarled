@@ -1,0 +1,23 @@
+.qa {
+    padding-bottom: 95px;
+    &__title {
+        max-width: 778px;
+        span {
+            color: #ffc905;
+        }
+    }
+    &__subtitle {
+        position: relative;
+        padding-left: 68px;
+        margin-top: 44px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 48px;
+            height: 1px;
+            background: #333;
+        }
+    }
+}

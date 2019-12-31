@@ -156,12 +156,18 @@ ul,li {
 		}
 	}
 }
+button.btn {
+	padding: 0;
+	a {
+		padding: 15px 45px;
+	}
+}
 
 @import "sections/header"; 
 @import "sections/home"; 
 @import "sections/1solution"; 
-
-
+@import "sections/2qa"; 
+@import "sections/3kviz"; 
 @import "sections/4what";
 @import "sections/5calc";
 @import "sections/6key";
@@ -172,7 +178,7 @@ ul,li {
 @import "sections/11reviews";
 @import "sections/12support";
 @import "sections/13consult";
-
+@import "sections/modal";
 
 @import "sections/footer"; 
 

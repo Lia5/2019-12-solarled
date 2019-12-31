@@ -28,6 +28,8 @@
     &__body {
         width: 35%;
         padding-top: 20px;
+        position: relative;
+        z-index: 2;
     }
     &__form {
         max-width: 531px;
@@ -52,8 +54,14 @@
         .btn {
             margin-top: 47px;
             margin-left: 19px;
+            a {
+                color: #fff;
+            }
         }
     }
+
+}
+.form {
     input {
         display: block;
         width: 300px;
@@ -68,4 +76,5 @@
             margin-bottom: 0;
         }
     }
+    
 }

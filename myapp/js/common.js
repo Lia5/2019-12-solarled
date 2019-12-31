@@ -62,47 +62,77 @@ $(function() {
         }
     });
 
+    //kviz
+    if(jQuery('.kviz').length) {
+        $('.qa-next').click(function(e){
+            e.preventDefault();
+            $(this).parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
+        });
+        $(".qa-prev").click(function(e) {
+            e.preventDefault();
+            $(this).parent().parent('.step-slide').removeClass('step-slide--active').prev().addClass('step-slide--active');
+        });
+    }
+
+    //popup
+    if(jQuery('.modal__wrap').length) {
+        let modalWrap = $('.modal__wrap');
+        
+        //popup
+        $(".modal-open").click(function (e){
+          e.preventDefault();
+          var numModal = $(this).attr('href');
+          var modal =  $(numModal);
+          modalWrap.removeClass('fadeOutUp');
+          modalWrap.addClass('fadeInDown');
+          modal.removeClass('disabled');
+          modal.addClass('flex');
+          $('body').addClass('body-modal-open');
+          // body.addClass('body-modal');
+        });
+      
+        $('.modal-close').click(function (){
+          modalWrap.removeClass('fadeInDown');
+          modalWrap.addClass('fadeOutUp');
+          setTimeout(function() {
+              $('.modal').addClass('disabled');
+            }, 700);
+          setTimeout(function() {
+              $('.modal').removeClass('flex');
+              $('body').removeClass('body-modal-open');
+            }, 800);  
+      
+        });
+        $('.modal').mouseup(function (e){ // событие клика по веб-документу
+          var div = $(".modal__body"); // тут указываем ID элемента
+          var close = $('.modal-close');
+          if (close.is(e.target)) {
+      
+          } else if (!div.is(e.target) // если клик был не по нашему блоку
+          && div.has(e.target).length === 0) { // и не по его дочерним элементам
+              var modalWrap = $('.modal__wrap');
+              modalWrap.removeClass('fadeInDown');
+              modalWrap.addClass('fadeOutUp');
+              setTimeout(function() {
+                  $('.modal').addClass('disabled');
+              }, 700);
+              setTimeout(function() {
+                  $('.modal').removeClass('flex');
+                  $('body').removeClass('body-modal-open');
+              }, 800); 
+            
+          }
+        });
+    }
+    //scrollto
+    
+    if(jQuery('.scroll-to').length) {
+        var $page = $('html, body');
+        $('.scroll-to[href*="#"]').click(function() {
+            $page.animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 400);
+            return false;
+        });
+    }
 });
-
-
-
-// document.addEventListener('DOMContentLoaded', function(){
-// //menu
-//     var menu = document.querySelector('.menu-toggle');
-//     menu.addEventListener('click', function(){
-//         var nav = document.querySelector('.main-menu');
-//         nav.classList.toggle('active');
-//         var navGamb = document.querySelector('.menu-toggle');
-//         navGamb.classList.toggle('active');
-//     });
-// //tabs
-// 	// store tabs variable
-// 	var myTabs = document.querySelectorAll("ul.header__tabs > li");
-//     function myTabClicks(tabClickEvent) {
-// 		for (var i = 0; i < myTabs.length; i++) {
-// 			myTabs[i].classList.remove("active");
-// 		}
-// 		var clickedTab = tabClickEvent.currentTarget;
-// 		clickedTab.classList.add("active");
-// 		tabClickEvent.preventDefault();
-// 		var myContentPanes = document.querySelectorAll(".tab-pane");
-// 		for (i = 0; i < myContentPanes.length; i++) {
-// 			myContentPanes[i].classList.remove("active");
-// 		}
-//         var anchorReference = tabClickEvent.target;
-//         console.log(anchorReference);
-//         var activePaneId = anchorReference.getAttribute("href");
-//         console.log(activePaneId);
-//         var activePane = document.querySelector(activePaneId);
-//         console.log(activePaneId);
-// 		activePane.classList.add("active");
-//     }
-//     for (i = 0; i < myTabs.length; i++) {
-// 		myTabs[i].addEventListener("click", myTabClicks)
-// 	}
-
-
-
-
-
-// });
