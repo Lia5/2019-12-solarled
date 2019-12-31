@@ -101,6 +101,10 @@ ul,li {
 	span {
 		display: block;
 		color: $accent2;
+		@media screen and (max-width: 565px) {
+			display: inline;
+			padding-left: 7px;
+		}
 	}
 	@media screen and (max-width: 565px) {
 		font-size: 26px;

@@ -66,7 +66,13 @@ $(function() {
     if(jQuery('.kviz').length) {
         $('.qa-next').click(function(e){
             e.preventDefault();
-            $(this).parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
+            if($(this).parent().prev().find('input:checked').length) {
+                $(this).parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');
+            } else {
+                $(this).parent().find('.kviz__error').text('Выберите вариант ответа!');
+            }
+
+            
         });
         $(".qa-prev").click(function(e) {
             e.preventDefault();
