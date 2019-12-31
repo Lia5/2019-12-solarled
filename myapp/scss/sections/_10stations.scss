@@ -1,8 +1,14 @@
 .stations {
     position: relative;
     padding-top: 80px;
+    @media screen and (max-width: 520px) {
+        padding-top: 13px;
+    }
     .wrap {
         position: relative;
+        @media screen and (max-width: 520px) {
+            padding: 0;
+        }
     }
     &:before {
         content: "";
@@ -20,6 +26,10 @@
     &__title {
         padding-left: 15%;
         margin-bottom: 60px;
+        @media screen and (max-width: 520px) {
+            padding-left: 13px;
+            margin-bottom: 40px;
+        }
     }
     &__item {
         display: flex;
@@ -32,6 +42,10 @@
         font-size: 18px;
         font-weight: 700;
         color: #075057;
+
+        @media screen and (max-width: 520px) {
+            font-size: 16px;
+        }
         &:before {
             content: "";
             position: absolute;
@@ -41,6 +55,10 @@
             width: 276px;
             height: 1px;
             background-color: #075057;
+            @media screen and (max-width: 520px) {
+                bottom: -20px;
+                width: 241px;
+            }
         }
     }
     &__slider {
@@ -65,6 +83,10 @@
         font-size: 14px;
         @media screen and (max-width: 820px) {
             width: 100%;
+        }
+
+        @media screen and (max-width: 520px) {
+            padding-top: 8%;
         }
         &-name {
             font-weight: 700;
