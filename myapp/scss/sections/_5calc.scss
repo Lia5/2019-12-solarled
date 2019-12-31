@@ -9,6 +9,7 @@
     @media screen and (max-width: 520px) {
         padding-top: 82px;
         padding-bottom: 141px;
+        background-size: contain;
     }
     &__head {
         display: flex;
@@ -41,6 +42,8 @@
             display: none;
             @media screen and (max-width: 580px) {
                 display: block;
+                text-align: center;
+                padding: 5%;
             }
         }
     }
