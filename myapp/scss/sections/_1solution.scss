@@ -4,6 +4,10 @@
     @media screen and (max-width: 1136px) {
         padding: 100px 0;
     }
+    @media screen and (max-width: 565px) {
+        padding-bottom: 67px;
+    }
+    
     &__items {
         display: flex;
         justify-content: space-between;
@@ -39,11 +43,15 @@
                 transform: scale(1.3);
                 background: #075057;
                 z-index: -1;
+                @media screen and (max-width: 580px) {
+                    transform: scale(1.2);
+                    max-height: 191px;
+                }
             }
         }
         @media screen and (max-width: 565px) {
             &:last-of-type {
-                margin-top: 40px;
+                margin-top: 27px;
                 .solution__icon {
                     transform: rotate(0);
                 }

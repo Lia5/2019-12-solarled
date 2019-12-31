@@ -144,6 +144,10 @@ ul,li {
 	min-width: 255px;
 	text-align: center;
 	border-radius: 5px;
+	@media screen and (max-width: 580px) {
+		min-width: 220px;
+		padding: 12px 45px;
+	}
 	&:hover {
 		background: #e0e6e7;
 	}

@@ -5,6 +5,10 @@
     overflow: hidden;
     padding-top: 75px;
     padding-bottom: 128px;
+    @media screen and (max-width: 565px) {
+        padding-top: 54px;
+        padding-bottom: 112px;
+    }
     &:before {
         content: "";
         position: absolute;
@@ -64,6 +68,9 @@
 
         &__num {
             font-size: 30px;
+            @media screen and (max-width: 565px) {
+                font-size: 26px;
+            }
             span {
                 color: #ffc905;
             }
@@ -76,6 +83,11 @@
             color: #ffc905;
             margin-top: 30px;
             margin-bottom: 81px;
+            @media screen and (max-width: 565px) {
+                font-size: 26px;
+                line-height: 30px;
+                margin-bottom: 30px;
+            }
         }
         &__subtitle {
             position: absolute;
@@ -215,7 +227,9 @@
     display: flex;
     margin-top: 67px;
     @media screen and (max-width: 580px) {
+        margin-top: 30px;
         flex-wrap: wrap;
+        flex-direction: column-reverse;
         .btn {
             margin: 0 auto 20px;
         }
