@@ -135,6 +135,7 @@
     transform: scale(-1, 1); 
     margin-right: 77px;
     &.disabled {
+        display: inline-block!important;
         svg {
             fill: #a9a9a9;
         }
@@ -146,6 +147,7 @@
 }
 .owl-next {
     &.disabled {
+        display: inline-block!important;
         svg {
             fill: #a9a9a9;
         }
