@@ -1,5 +1,9 @@
 .time {
     padding: 148px 0;
+    @media screen and (max-width: 520px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     &__title {
         padding-left: 7%;
         span {
@@ -14,6 +18,10 @@
 
         @media screen and (max-width: 1105px) {
             padding-left: 30px;
+        }
+        @media screen and (max-width: 520px) {
+            padding-top: 116px;
+            padding-left: 0;
         }
     }
     &__items {

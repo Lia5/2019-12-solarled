@@ -1,20 +1,36 @@
 .calc {
     background: url('../img/calc-bg.png') no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position-y: bottom;
     padding: 114px 0 554px;
-    
+    @media screen and (max-width: 820px) {
+        padding-bottom: 254px;
+    }
+    @media screen and (max-width: 520px) {
+        padding-top: 50px;
+        padding-bottom: 141px;
+    }
     &__head {
         display: flex;
         margin-bottom: 138px;
+        @media screen and (max-width: 820px) {
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
     }
     &__left {
         padding: 0 2% 0 10px;    
         width: 55%;
+        @media screen and (max-width: 820px) {
+            width: 100%;
+        }
     }
     &__right {
         width: 45%;
         padding: 5% 14% 0 5%;   
+        @media screen and (max-width: 820px) {
+            width: 100%;
+        }
     }
     &__text {
         margin-bottom: 30px;
@@ -44,6 +60,9 @@
         display: flex;
         max-width: 100%;
         overflow-x: auto;
+        @media screen and (max-width: 1150px) {
+           justify-content: center;
+        }
     }
     &__item {
         text-align: center;
@@ -57,6 +76,7 @@
             line-height: 34px;
             color: #075057;
             font-weight: 700;
+            
             &:before, &:after {
                 content: '';
                 position: absolute;
@@ -100,6 +120,9 @@
             max-width: 186px;
             padding-right: 7px;
             padding-bottom: 22px;
+            @media screen and (max-width: 1150px) {
+                display: none;
+            }
             .calc__line {
                 padding: 8px 0;
                 & + .calc__line {

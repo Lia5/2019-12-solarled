@@ -15,7 +15,7 @@
     <header class="header">
       <div class="wrap">
         <div class="logo"><img src="img/logo.png" alt="logo Solarled"></div>
-        <div class="header__social"><a href="mailto:manager@solarled.com.ua" class="mail">manager@solarled.com.ua</a><a href="tel:+380443347469" class="phone">(044) 334 74 69</a><a href="tel:+380739997469" class="phone">(073) 999 74 69</a></div>
+        <div class="header__social"><a href="mailto:manager@solarled.com.ua" class="mail header__mail">manager@solarled.com.ua</a><a href="tel:+380443347469" class="phone">(044) 334 74 69</a><a href="tel:+380739997469" class="phone">(073) 999 74 69</a></div>
       </div>
     </header>
     <section class="home">
@@ -31,7 +31,6 @@
             <div class="home__item"><span class="home__title">Собираем и подаем документы</span><span class="hone_descr">с на “Зеленый тариф”</span></div>
             <div class="home__item"><span class="home__title">Поставляем оборудование</span><span class="hone_descr">с и монтируем солнечные электростанции под ключ</span></div>
           </div>
-          <div class="home__roof"></div>
         </div>
       </div>
     </section>
@@ -785,7 +784,7 @@
               </g>
             </svg>
           </div>
-          <div><a href="#consult" class="scroll-to btn btn--green">Узнать подробнее</a></div>
+          <div class="support__btn"><a href="#consult" class="scroll-to btn btn--green">Узнать подробнее</a></div>
         </div>
       </div>
     </section>
@@ -821,40 +820,18 @@
       </div>
     </div>
     <div id="modalThank" class="modal disabled">
+      <div class="close modal-close">
+        <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="t-popup__close-icon">
+          <g stroke="none" stroke-width="1" fill-rule="evenodd">
+            <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+            <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+          </g>
+        </svg>
+      </div>
       <div class="modal__wrap animated fadeInDown">
-        <div class="close modal-close">
-          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="t-popup__close-icon">
-            <g stroke="none" stroke-width="1" fill-rule="evenodd">
-              <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
-              <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
-            </g>
-          </svg>
-        </div>
         <div class="modal__body">
-          <h3>Оформить франшизу</h3>
-          <div class="modal__form">
-            <form action="#">  
-              <div class="form-line">
-                <input type="text" name="name" placeholder="Имя контактного лица" required>
-              </div>
-              <div class="form-line">
-                <input type="text" name="phone" placeholder="Телефон" required class="phone-mask">
-              </div>
-              <div class="form-line">
-                <input type="email" name="email" placeholder="Email" required>
-              </div>
-              <div class="form-line">
-                <input type="text" name="city" placeholder="Город" required>
-              </div>
-              <div class="form-line">
-                <input type="submit" value="Отправить заявку" class="kviz-btn">
-              </div>
-              <div class="agree-line">
-                <input id="modal__agree1" type="checkbox" checked="" disabled>
-                <label for="#modal__agree1">Нажимая "Отправить", вы соглашаетесь на обработку ваших персональных данных</label>
-              </div>
-            </form>
-          </div>
+          <h3 class="modal__title">Спасибо за обращение!</h3>
+          <p>В ближайшее мы с вами свяжемся!</p>
         </div>
       </div>
     </div>
@@ -863,14 +840,14 @@
         <div class="footer__top">
           <div class="footer__item"><a href="tel:+380443347469">(044) 334 74 69</a><a href="tel:+380989997469">(098) 999 74 69</a></div>
           <div class="footer__item"><a href="tel:+380739997469">(073) 999 74 69</a><a href="tel:+380509997469">(050) 999 74 69</a></div>
-          <div class="footer__item"><a href="mailto:manager@solarled.com.ua">manager@solarled.com.ua</a><a href="mailto:sales@solarled.com.ua">sales@solarled.com.ua</a></div>
-          <div class="footer__item">
+          <div class="footer__item footer__item--mob"><a href="mailto:manager@solarled.com.ua">manager@solarled.com.ua</a><a href="mailto:sales@solarled.com.ua">sales@solarled.com.ua</a></div>
+          <div class="footer__item footer__item--mob">
             <div>г. Киев.</div>
             <div>Переулок Квитневый 2</div>
           </div>
         </div>
         <div class="footer__bottom"> 
-          <div class="footer__item"> 
+          <div class="footer__item footer__item--mob"> 
             <div>© 2019 SolarLed. Все права защищены.  </div>
             <div>Сайт не является публично копия</div>
           </div>

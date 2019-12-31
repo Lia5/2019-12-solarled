@@ -2,17 +2,32 @@
     padding-top: 136px;
     padding-bottom: 160px;
     background: #f8f8ff;
+    @media screen and (max-width: 520px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
     .wrap {
         display: flex;
+        @media screen and (max-width: 820px) {
+            flex-wrap: wrap;
+        }
     }
     &__body {
         width: 50%;
         padding-left: 1%;
+        @media screen and (max-width: 820px) {
+            width: 100%;
+            padding-left: 0;
+        }
     }
     &__title {
         padding-left: 90px;
         padding-right: 5%;
         position: relative;
+        @media screen and (max-width: 520px) {
+            padding-left: 0;
+            padding-top: 90px;
+        }
         &:before {
             content: url('../img/icons/icon-power.png');
             position: absolute;
@@ -23,10 +38,20 @@
     &__descr {
         margin-top: 38px;
         padding-left: 90px;
+        @media screen and (max-width: 520px) {
+            padding-left: 0;
+        }
     }
     &__right {
         width: 49%;
         padding: 4% 0% 0 16%;  
+        @media screen and (max-width: 820px) {
+            width: 100%;
+            padding-left: 90px;
+        }
+        @media screen and (max-width: 520px) {
+            padding-left: 0;
+        }
     }
     &__about {
         margin-bottom: 30px;
@@ -38,7 +63,10 @@
         text-align: center;
         margin-top: 120px;
         margin-bottom: 70px;
-    
+        @media screen and (max-width: 520px) {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
     }
     &__items {
         display: flex;
@@ -67,10 +95,21 @@
         &:nth-child(n+5) {
             margin-bottom: 30px;
         }
+        @media screen and (max-width: 1040px) {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 520px) {
+            width: 100%;
+            display: flex;
+        }
     }
     &__num {
         font-family: "Raleway", Arial, Helvetica, sans-serif;
         font-weight: 700;
         color: #ffc905;
+        @media screen and (max-width: 520px) {
+            margin-right: 20px;
+        }
     }
 }

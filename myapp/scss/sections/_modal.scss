@@ -158,9 +158,34 @@
   
   }
   #modalThank {
-      .modal-open {
-          color: #fff;
-      }
+      color: #333;
+    background-image: url(../img/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    &:before {
+        content: url(../img/home-bg-right.png);
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &:after {
+        content: url(../img/roof.png);
+        position: absolute;
+        bottom: -8px;
+        right: 0;
+    }
+    .modal-open {
+        color: #fff;
+    }
+    .modal__title {
+        color: #ffc905;
+    }
+    .modal__wrap {
+        width: 100%;
+        max-width: 849px;
+        text-align: left;
+    }
   }
   @keyframes fadeOutUp {
     from {
@@ -195,31 +220,4 @@
   #modalForm .modal__wrap {
     max-width: 439px;
   }
-  .center {
-    text-align: center;
-  }
-  // div[id^="modalEvents-"] {
-  //   .modal__wrap {
-  //     max-width: 959px;
-  //   }
-  //   .modal__body {
-  //     background: #75787E;
-  //     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.32);
-  //   }
-  //   .events {
-  //     &__name {
-  //       color: #fff;
-  //     }
-  //     &__position {
-  //       color: #EFF3F7;
-  //       &--top {
-  //         color: #fff;
-  //       }
-  //     }
-  //     &__text {
-  //       color: #DBDCDE;
-  //       max-height: none;
-  //     }
-  //   }
-  // }
   

@@ -1,23 +1,37 @@
 .what {
     padding-top: 233px;
     padding-bottom: 210px;
+    @media screen and (max-width: 820px) {
+        padding: 100px 0 50px;
+    }
     .wrap {
         display: flex;
+        @media screen and (max-width: 1078px) {
+            flex-wrap: wrap;
+        }
     }
     &__body {
         width: 50%;
         padding-left: 7%;
         padding-right: 9%;
+        @media screen and (max-width: 1078px) {
+            width: 100%;
+        }
     }
     &__title {
         padding-left: 90px;
         position: relative;
+        @media screen and (max-width: 520px) {
+            padding-left: 0;
+            padding-top: 90px;
+        }
         &:before {
             content: url('../img/icons/icon-solar.png');
             position: absolute;
             top: 15px;
             left: 0;
         }
+
     }
     &__descr {
         margin-top: 38px;
@@ -30,13 +44,26 @@
         font-family: "NotoSans", Arial, Helvetica, sans-serif;
         padding-top: 40px;
         padding-left: 5%;
+        @media screen and (max-width: 1078px) {
+            width: 100%;
+        }
     }
     &__item {
         width: 42%;
+        @media screen and (max-width: 1078px) {
+            margin-bottom: 20px;
+        }
+        @media screen and (max-width: 580px) {
+            width: 100%;
+            display: flex;
+        }
     }
     &__num {
         font-family: "Raleway", Arial, Helvetica, sans-serif;
         font-weight: 700;
         color: #ffc905;
+        @media screen and (max-width: 580px) {
+            margin-right: 20px;
+        }
     }
 }

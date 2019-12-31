@@ -1,13 +1,28 @@
 .solution {
     padding: 300px 0 265px;
+    overflow: hidden;
+    @media screen and (max-width: 1136px) {
+        padding: 100px 0;
+    }
     &__items {
         display: flex;
         justify-content: space-between;
         font-family: "NotoSans", Arial, Helvetica, sans-serif;
         box-shadow: 0 8px 5px -8px rgba(7,80,87,0.04);
+        @media screen and (max-width: 1065px) {
+            flex-wrap: wrap;
+        }
     }
     &__item {
         width: 20%;
+        @media screen and (max-width: 820px) {
+            width: 45%;
+            margin-bottom: 50px;
+        }
+        @media screen and (max-width: 565px) {
+            width: 80%;
+            margin: 0 auto 65px;
+        }
         &.active {
             color: #fff;
             box-shadow: none;
@@ -26,8 +41,20 @@
                 z-index: -1;
             }
         }
+        @media screen and (max-width: 565px) {
+            &:last-of-type {
+                margin-top: 40px;
+                .solution__icon {
+                    transform: rotate(0);
+                }
+            }
+        }
     }
     &__icon {
         margin-bottom: 16px;
+        @media screen and (max-width: 565px) {
+            width: 30px;
+            transform: rotate(90deg);
+        }
     }
 }

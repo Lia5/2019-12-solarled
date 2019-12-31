@@ -7,6 +7,9 @@
     &__slider {
         padding-top: 90px;
         padding-left: 20%;
+        @media screen and (max-width: 820px) { 
+            padding-left: 5%;
+        }
     }
     &__item {
         display: flex;
@@ -29,11 +32,29 @@
         position: absolute;
         top: -33px;
         right: 0;
+        @media screen and (max-width: 820px) { 
+            top: auto;
+            right: auto;
+            bottom: -12px;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, 0);
+            width: 125px;
+            margin-left: 0;
+        }
     }
     .slider-counter--reviews {
         font-size: 27px;
         position: absolute;
         top: 95px;
         right: 56px;
+        @media screen and (max-width: 820px) { 
+            right: auto;
+            top: auto;
+            bottom: 0;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, 0);
+        }
     }
 }

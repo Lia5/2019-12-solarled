@@ -1,7 +1,13 @@
 .about {
     padding: 82px 0;
+    @media screen and (max-width: 820px) {
+        padding: 50px 0;
+    }
     .wrap {
         display: flex;
+        @media screen and (max-width: 820px) {
+            flex-wrap: wrap;
+        }
     }
     &__descr {
         margin-top: 29px;
@@ -10,11 +16,17 @@
     &__body {
         width: 50%;
         padding-left: 6%;
+        @media screen and (max-width: 820px) {
+            width: 100%;
+        }
     }
     &__items {
         width: 50%;
         display: flex;
         flex-wrap: wrap;
+        @media screen and (max-width: 820px) {
+            width: 100%;
+        }
     }
     &__item {
         width: 50%;
@@ -22,6 +34,20 @@
         margin-bottom: 70px;
         &:nth-child(1), &:nth-child(4){
             background: #f8f8ff;
+        }
+        @media screen and (max-width: 520px) {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 20px;
+            &:nth-child(1) {
+                background: #f8f8ff;
+            }
+            &:nth-child(3){
+                background: #f8f8ff;
+            }
+            &:nth-child(4){
+                background: transparent;
+            }
         }
     }
 }
