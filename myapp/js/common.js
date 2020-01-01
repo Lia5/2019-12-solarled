@@ -19,6 +19,7 @@ $(function() {
         }
         let carousel = e.relatedTarget;
         $('.slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+        $('.stations__item').removeClass('active');
     }).owlCarousel({
         loop: false,
         dots: false,
@@ -139,6 +140,14 @@ $(function() {
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 400);
             return false;
+        });
+    }
+    //mob slider
+    if ( window.innerWidth < 821 || window.screen.width < 821) {
+        $('.stations__arrow').on('click', function(){
+            $(this).parent().parent().parent().parent().toggleClass('active');
+            // .siblings().children().removeClass('active');
+            $(this).next().toggleClass('active');
         });
     }
 });

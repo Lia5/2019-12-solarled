@@ -35,6 +35,19 @@
         display: flex;
         @media screen and (max-width: 820px) {
             flex-wrap: wrap;
+            padding-bottom: 20px;
+            &.active {
+                .stations__points {
+                    display: flex;
+                }
+                .stations__descr-name,
+                .stations__descr-text {
+                    display: block;
+                }
+                .stations__arrow:after {
+                    transform: rotate(135deg);
+                }
+            }
         }
     }
     &__name {
@@ -42,23 +55,32 @@
         font-size: 18px;
         font-weight: 700;
         color: #075057;
+        margin-bottom: 46px;
+        span {
+            display: inline-block;
+            position: relative;
+            max-width: 333px;
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 80%;
+                width: 276px;
+                height: 1px;
+                background-color: #075057;
+                @media screen and (max-width: 520px) {
+                    bottom: -20px;
+                    width: 241px;
+                }
+            }   
+        
 
+        }
         @media screen and (max-width: 520px) {
             font-size: 16px;
-        }
-        &:before {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 80%;
-            width: 276px;
-            height: 1px;
-            background-color: #075057;
-            @media screen and (max-width: 520px) {
-                bottom: -20px;
-                width: 241px;
-            }
+            margin-bottom: 11px;
+            padding-bottom: 35px;
         }
     }
     &__slider {
@@ -91,19 +113,25 @@
         &-name {
             font-weight: 700;
             margin-bottom: 5px;
+            @media screen and (max-width: 820px) {
+                display: none;
+            }
         }
         &-text {
             margin-bottom: 16px;
+            @media screen and (max-width: 820px) {
+                display: none;
+            }
         }
-    }
-    &__name {
-        max-width: 333px;
-        margin-bottom: 46px;
     }
     &__points {
         display: flex;
         margin-bottom: 28px;
+        @media screen and (max-width: 820px) {
+            display: none;
+        }
     }
+
     &__point {
         margin-right: 64px;
         &-name {
@@ -128,12 +156,40 @@
             left: 99px;
             bottom: 12px;
         }
+        @media screen and (max-width: 820px) { 
+            left: 68px;
+        }
+    }
+    &__arrow {
+        display: none;
+        @media screen and (max-width: 820px) {
+            display: block;
+            position: absolute;
+            bottom: -31px;
+            right: 11px;
+       
+            width: 25px;
+            height: 25px;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 4px;
+                width: 14px;
+                height: 14px;
+                border-left: 1px solid #075057;
+                border-bottom: 1px solid #075057;
+                transform: rotate(-45deg);
+            }
+        }
+        
     }
 }
 
 .owl-prev {
     transform: scale(-1, 1); 
     margin-right: 77px;
+    outline: none;
     &.disabled {
         display: inline-block!important;
         svg {
@@ -146,6 +202,7 @@
     }
 }
 .owl-next {
+    outline: none;
     &.disabled {
         display: inline-block!important;
         svg {
