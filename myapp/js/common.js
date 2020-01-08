@@ -1,4 +1,10 @@
 $(function() {
+    //select-number form
+    if(jQuery('.phone-mask').length) {
+        jQuery(function($){
+            $(".phone-mask").mask("+38(999) 999-9999");
+        });
+    }
     //time
     if (window.innerHeight < 821 || window.screen.height < 821) {
         $('.time__num').on('click', function(){
@@ -150,4 +156,43 @@ $(function() {
             $(this).next().toggleClass('active');
         });
     }
+
+    	//click on form submit button
+	// jQuery(document).on("click",".form-wizard .form-wizard-submit" , function(e){
+	// 	e.preventDefault();
+	// 	var parentFieldset = jQuery(this).parents('.wizard-fieldset');
+	// 	var cansend = true;
+	// 	parentFieldset.find('.wizard-required').each(function() {
+	// 		var thisValue = jQuery(this).val();
+	// 		if( thisValue == "" ) {
+	// 			jQuery(this).siblings(".wizard-form-error").slideDown();
+	// 			cansend = false;
+	// 		}
+	// 		else {
+	// 			jQuery(this).siblings(".wizard-form-error").slideUp();
+	// 			cansend = true;
+	// 		}
+	// 	});
+		
+	// 	if ( cansend === true) {
+	// 		if(jQuery('#quizForm').length) {
+	// 			console.log('form');
+	// 			form = $('#quizForm');
+    //             jQuery.ajax({
+    //                 method: "POST",
+    //                 data: form.serialize() + "&action=contact_form&nonce_code=" + quizAjax.nonce,
+    //                 // url: quizAjax.url,
+    //                 url: 'https://optica.store/wp-content/themes/astra/php/sendamo.php',
+    //                 dataType: "json",
+    //                 success: function (json) {
+	// 					// if (json.success) {
+    //                         // jQuery(".wizard-section").fadeOut(100);
+	// 						window.location.href = "/quiz-thanks/";
+	// 					// }
+    //                 }
+	// 			});
+				
+	// 		} 
+	// 	}
+	// });
 });

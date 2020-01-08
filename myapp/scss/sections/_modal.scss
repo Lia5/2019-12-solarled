@@ -1,5 +1,5 @@
 .modal {
-    max-height: 100vh;
+    max-height: 102vh;
     overflow: auto;
     display: flex;
     width: 100%;
@@ -158,7 +158,7 @@
   
   }
   #modalThank {
-      color: #333;
+    color: #333;
     background-image: url(../img/home-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -168,12 +168,14 @@
         position: absolute;
         top: 0;
         right: 0;
+        z-index: -1;
     }
     &:after {
         content: url(../img/roof.png);
         position: absolute;
         bottom: -8px;
         right: 0;
+        z-index: -1;
     }
     .modal-open {
         color: #fff;
@@ -185,6 +187,24 @@
         width: 100%;
         max-width: 849px;
         text-align: left;
+    }
+    @media screen and (max-width: 1305px) {
+      .modal__body {
+        position: relative;
+        z-index: 1;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgb(255,255,255);
+          background:radial-gradient(ellipse at center, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+          z-index: -1;
+          transform: scale(10);
+        }
+      }
     }
   }
   @keyframes fadeOutUp {

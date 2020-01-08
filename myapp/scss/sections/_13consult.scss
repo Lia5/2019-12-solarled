@@ -147,3 +147,17 @@
     }
     
 }
+.form {
+    .phone-mask {
+        background-image: url(../img/icons/phone.png);
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+        padding-right: 40px;
+    }
+    .name-icon {
+        background-image: url(../img/icons/name.png);
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+        padding-right: 40px;
+    }
+}
