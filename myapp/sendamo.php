@@ -66,11 +66,6 @@ $question2 	= filter_var ($_REQUEST['question2']);
 $question3 	= filter_var ($_REQUEST['question3']);
 $question4 	= filter_var ($_REQUEST['question4']);
 $question5  = filter_var ($_REQUEST['question5']);
-$question6  = filter_var ($_REQUEST['question6']);
-$question7  = filter_var ($_REQUEST['question7']);
-$question8  = filter_var ($_REQUEST['question8']);
-$question9  = filter_var ($_REQUEST['question9']);
-$question10 	= filter_var ($_REQUEST['question10']);
 
 
 
@@ -207,7 +202,7 @@ $leads['request']['leads']['add']=array(
       /*Товар 1*/
 
       array(
-        "id"=>264053,   
+        "id"=>697941,   
         "values"=> array(
           array(
             "value"=>$question1
@@ -251,56 +246,6 @@ $leads['request']['leads']['add']=array(
           )
         )
       ),
-
-
-      array(
-        "id"=>264065,   
-        "values"=> array(
-          array(
-            "value"=>$question6
-          )
-        )
-      ),
-
-      /*Номер заказа*/
-      array(
-        "id"=>264067,   
-        "values"=> array(
-          array(
-            "value"=>$question7
-          )
-        )
-      ),
-
-      array(
-        "id"=>264069,   
-        "values"=> array(
-          array(
-            "value"=>$question8
-          )
-        )
-      ),
-
-      array(
-        "id"=>264071,   
-        "values"=> array(
-          array(
-            "value"=>$question9
-          )
-        )
-      ),
-
-      array(
-        "id"=>264073,   
-        "values"=> array(
-          array(
-            "value"=>$question10
-          )
-        )
-      ),
-
-
-
 
 
 

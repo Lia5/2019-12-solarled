@@ -1,7 +1,7 @@
 section.kviz
     .wrap
         .kviz-qa
-            form(action="#")
+            form(form id="quizForm" action="/ method=" post"="" role="form")
                 .step-slide.step-slide--active
                     .step-slide__num 
                         span 1
@@ -102,5 +102,5 @@ section.kviz
                         input(type="text" placeholder="Имя").name-icon
                         input(type="text" placeholder="Телефон").phone-mask
                         button.btn.btn--orange
-                            a(href="#modalKviz").modal-open Получить предложение
+                            a(href="#modalKviz").modal-open.kviz__btn Получить предложение
 
