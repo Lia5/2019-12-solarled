@@ -188,7 +188,7 @@ $(function() {
         });
     }
 
-        //click on form submit button
+    //click on form submit button - AMO
     $('.kviz__btn').on('click', function(){
         $($(this).parent().parent()).each(function () {
             var form = $(this);
