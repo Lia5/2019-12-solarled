@@ -11,7 +11,7 @@
     &:after {
         content: url(../img/roof-consult.png);
         position: absolute;
-        bottom: 0;
+        bottom: -7px;
         right: 0;
         @media screen and (max-width: 820px) {
             content: none;
