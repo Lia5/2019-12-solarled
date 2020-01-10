@@ -4,8 +4,9 @@ section.consult#consult
             .title Закажите бесплатную консультацию
             .consult__subtitle Узнайте, что нужно, чтобы установить солнечную электростанцию, ее стоимость и период окупаемости на вашем объекте
         .form.consult__form
-            form(action="#")
-                input(type="text" placeholder="Имя").name-icon
-                input(type="text" placeholder="Телефон").phone-mask
-                button.btn.btn--green 
+            form(action="#").quizForm
+                input(type="text" name="name2" placeholder="Имя").name-icon.rfield
+                input(type="text" name="phone" placeholder="Телефон").phone-mask.rfield
+                input(type="hidden" name="consult" value="Да")
+                button.btn.btn--green.kviz__btn(type="submit")
                     a(href="#modalThank").modal-open Заказать

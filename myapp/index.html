@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="img/favicon/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="img/favicon/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
     <meta name="keywords" content="Теги сайта">
     <meta name="description" content="Описание сайта">
@@ -15,7 +15,8 @@
     <header class="header">
       <div class="wrap">
         <div class="logo"><img src="img/logo.png" alt="logo Solarled"></div>
-        <div class="header__social"><a href="mailto:manager@solarled.com.ua" class="mail header__mail">manager@solarled.com.ua</a><a href="tel:+380443347469" class="phone">(044) 334 74 69</a><a href="tel:+380739997469" class="phone">(073) 999 74 69</a></div>
+        <div class="header__social"><a href="tel:+380443347469" class="phone">(044) 334 74 69</a><a href="tel:+380739997469" class="phone">(073) 999 74 69</a>
+        </div>
       </div>
     </header>
     <section class="home">
@@ -65,21 +66,21 @@
     <section class="kviz">
       <div class="wrap">
         <div class="kviz-qa">
-          <form action="#">
+          <form class="quizForm">
             <div class="step-slide step-slide--active">
               <div class="step-slide__num"> <span>1</span>/5</div>
               <div class="step-slide__title">Где именно вы хотите <br>установить станцию?</div>
               <div class="kviz__ans question__ans--radio">
                 <label for="step1-1" class="pick-item">
-                  <input id="step1-1" type="radio" name="step1" value="На земле (наземной конструкции)" class="pick-item__input">
+                  <input id="step1-1" type="radio" name="question1" value="На земле (наземной конструкции)" class="pick-item__input">
                   <div class="pick-item__label">На земле (наземной конструкции)</div>
                 </label>
                 <label for="step1-2" class="pick-item">
-                  <input id="step1-2" type="radio" name="step1" value="На крыше (скатной, плоской)" class="pick-item__input">
+                  <input id="step1-2" type="radio" name="question1" value="На крыше (скатной, плоской)" class="pick-item__input">
                   <div class="pick-item__label">На крыше (скатной, плоской) </div>
                 </label>
                 <label for="step1-3" class="pick-item">
-                  <input id="step1-3" type="radio" name="step1" value="Комбинированно" class="pick-item__input">
+                  <input id="step1-3" type="radio" name="question1" value="Комбинированно" class="pick-item__input">
                   <div class="pick-item__label">Комбинированно</div>
                 </label>
               </div>
@@ -89,16 +90,16 @@
             </div>
             <div class="step-slide">
               <div class="step-slide__num"> <span>2</span>/5</div>
-              <div class="step-slide__title">Какая мощность подведенной к вашему <br>объекту линии электропереда
+              <div class="step-slide__title">Какая мощность подведенной к вашему <br>объекту линии электропередачи
                 <div class="step-slide__subtitle">(мощность в кВт вы можете посмотреть в договоре с вашей энергораспределительной компанией)</div>
               </div>
               <div class="kviz__ans question__ans--radio">
                 <label for="step2-1" class="pick-item">
-                  <input id="step2-1" type="radio" name="step2" value="Знаю сколько кВт, фаз" class="pick-item__input">
+                  <input id="step2-1" type="radio" name="question2" value="Знаю сколько кВт, фаз" class="pick-item__input">
                   <div class="pick-item__label">Знаю сколько кВт, фаз</div>
                 </label>
                 <label for="step2-2" class="pick-item">
-                  <input id="step2-2" type="radio" name="step2" value="Не знаю" class="pick-item__input">
+                  <input id="step2-2" type="radio" name="question2" value="Не знаю" class="pick-item__input">
                   <div class="pick-item__label">Не знаю</div>
                 </label>
               </div>
@@ -111,15 +112,15 @@
               <div class="step-slide__title">Хотите ли вы быть обеспеченным <br>электроэнергией, даже когда нет внешней сети?</div>
               <div class="kviz__ans question__ans--radio">
                 <label for="step3-1" class="pick-item">
-                  <input id="step3-1" type="radio" name="step3" value="Нет, хочу просто зарабатывать  на зеленом тарифе" class="pick-item__input">
+                  <input id="step3-1" type="radio" name="question3" value="Нет, хочу просто зарабатывать  на зеленом тарифе" class="pick-item__input">
                   <div class="pick-item__label">Нет, хочу просто зарабатывать  на зеленом тарифе</div>
                 </label>
                 <label for="step3-2" class="pick-item">
-                  <input id="step3-2" type="radio" name="step3" value="Да, знаю собственное потребление, а значит понимаю сколько нужно запасать" class="pick-item__input">
+                  <input id="step3-2" type="radio" name="question3" value="Да, знаю собственное потребление, а значит понимаю сколько нужно запасать" class="pick-item__input">
                   <div class="pick-item__label">Да, знаю собственное потребление, а значит понимаю сколько нужно запасать</div>
                 </label>
                 <label for="step3-3" class="pick-item">
-                  <input id="step3-3" type="radio" name="step3" value="Да, но не понимаю сколько нужно запасать" class="pick-item__input">
+                  <input id="step3-3" type="radio" name="question3" value="Да, но не понимаю сколько нужно запасать" class="pick-item__input">
                   <div class="pick-item__label">Да, но не понимаю сколько нужно запасать</div>
                 </label>
               </div>
@@ -132,19 +133,19 @@
               <div class="step-slide__title">Знаете ли вы площадь и ориентацию <br>скатов крыши?</div>
               <div class="kviz__ans question__ans--radio">
                 <label for="step4-1" class="pick-item">
-                  <input id="step4-1" type="radio" name="step4" value="Знаю площадь и примерно ориентацию по сторонам света" class="pick-item__input">
+                  <input id="step4-1" type="radio" name="question4" value="Знаю площадь и примерно ориентацию по сторонам света" class="pick-item__input">
                   <div class="pick-item__label">Знаю площадь и примерно ориентацию по сторонам света</div>
                 </label>
                 <label for="step4-2" class="pick-item">
-                  <input id="step4-2" type="radio" name="step4" value="Знаю площадь, ориентации не знаю, но могу указать адрес" class="pick-item__input">
+                  <input id="step4-2" type="radio" name="question4" value="Знаю площадь, ориентации не знаю, но могу указать адрес" class="pick-item__input">
                   <div class="pick-item__label">Знаю площадь, ориентации не знаю, но могу указать адрес</div>
                 </label>
                 <label for="step4-3" class="pick-item">
-                  <input id="step4-3" type="radio" name="step4" value="Не знаю ничего, но есть чертежи (проект) дома" class="pick-item__input">
+                  <input id="step4-3" type="radio" name="question4" value="Не знаю ничего, но есть чертежи (проект) дома" class="pick-item__input">
                   <div class="pick-item__label">Не знаю ничего, но есть чертежи (проект) дома</div>
                 </label>
                 <label for="step4-4" class="pick-item">
-                  <input id="step4-4" type="radio" name="step4" value="Не знаю ничего, нужен  выезд специалиста" class="pick-item__input">
+                  <input id="step4-4" type="radio" name="question4" value="Не знаю ничего, нужен  выезд специалиста" class="pick-item__input">
                   <div class="pick-item__label">Не знаю ничего, нужен  выезд специалиста</div>
                 </label>
               </div>
@@ -157,11 +158,11 @@
               <div class="step-slide__title">Знаете ли вы, что нужно для <br>подключения “зеленого тарифа”?</div>
               <div class="kviz__ans question__ans--radio">
                 <label for="step5-1" class="pick-item">
-                  <input id="step5-1" type="radio" name="step5" value="Да, но есть вопросы по процедурам и/или нормам закона" class="pick-item__input">
+                  <input id="step5-1" type="radio" name="question5" value="Да, но есть вопросы по процедурам и/или нормам закона" class="pick-item__input">
                   <div class="pick-item__label">Да, но есть вопросы по процедурам и/или нормам закона</div>
                 </label>
                 <label for="step5-2" class="pick-item">
-                  <input id="step5-2" type="radio" name="step5" value="Нет, объясните (мощность линии, требования к счетчику, нормы закона)" class="pick-item__input">
+                  <input id="step5-2" type="radio" name="question5" value="Нет, объясните (мощность линии, требования к счетчику, нормы закона)" class="pick-item__input">
                   <div class="pick-item__label">Нет, объясните (мощность линии, требования к счетчику, нормы закона)</div>
                 </label>
               </div>
@@ -175,9 +176,9 @@
                 <p>Мы уже анализируем ваши ответы. В ближайшее время наш менеджер свяжется с вами и предложит оптимальную комплектацию станции, расскажет, какой бюджет установки и как скоро вы сможете зарабатывать на “зеленом тарифе”.</p>
               </div>
               <div class="form step-slide__form">
-                <input type="text" placeholder="Имя" class="name-icon">
-                <input type="text" placeholder="Телефон" class="phone-mask">
-                <button class="btn btn--orange"><a href="#modalKviz" class="modal-open kviz__btn">Получить предложение</a></button>
+                <input type="text" placeholder="Имя" name="name2" required class="rfield name-icon">
+                <input type="text" placeholder="Телефон" name="phone" required class="rfield phone-mask">
+                <button type="submit" class="btn btn--orange"><a href="#modalKviz" class="modal-open kviz__btn">Получить предложение</a></button>
               </div>
             </div>
           </form>
@@ -816,10 +817,11 @@
           <div class="consult__subtitle">Узнайте, что нужно, чтобы установить солнечную электростанцию, ее стоимость и период окупаемости на вашем объекте</div>
         </div>
         <div class="form consult__form">
-          <form action="#">
-            <input type="text" placeholder="Имя" class="name-icon">
-            <input type="text" placeholder="Телефон" class="phone-mask">
-            <button class="btn btn--green"> <a href="#modalThank" class="modal-open">Заказать</a></button>
+          <form action="#" class="quizForm">
+            <input type="text" name="name2" placeholder="Имя" class="name-icon rfield">
+            <input type="text" name="phone" placeholder="Телефон" class="phone-mask rfield">
+            <input type="hidden" name="consult" value="Да">
+            <button type="submit" class="btn btn--green kviz__btn"><a href="#modalThank" class="modal-open">Заказать</a></button>
           </form>
         </div>
       </div>

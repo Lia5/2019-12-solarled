@@ -57,7 +57,7 @@ function CheckCurlResponse($code)
 }
 
 
-
+$contact_name2       = filter_var ($_REQUEST['name2']);
 $contact_name       = filter_var ($_REQUEST['fname']);
 $contact_phone      = filter_var ($_REQUEST['phone'],FILTER_SANITIZE_NUMBER_FLOAT);
 
@@ -66,6 +66,7 @@ $question2 	= filter_var ($_REQUEST['question2']);
 $question3 	= filter_var ($_REQUEST['question3']);
 $question4 	= filter_var ($_REQUEST['question4']);
 $question5  = filter_var ($_REQUEST['question5']);
+$consult  = filter_var ($_REQUEST['consult']);
 
 
 
@@ -90,16 +91,6 @@ $utm_campaign = $_POST['utm_campaign']; if ($utm_campaign == '') { $utm_campaign
 // echo "<br>";
 // echo $question5;
 // echo "<br>";
-// echo $question6;
-// echo "<br>";
-// echo $question7;
-// echo "<br>";
-// echo $question8;
-// echo "<br>";
-// echo $question9;
-// echo "<br>";
-// echo $question10;
-// echo "<br>";
 // echo $utm_source;
 // echo "<br>";
 // echo $utm_medium;
@@ -120,7 +111,8 @@ $utm_campaign = $_POST['utm_campaign']; if ($utm_campaign == '') { $utm_campaign
 //Служебные данные
 
 $responsible_user_id = 1; //id ответственного по сделке, контакту, компании
-// $lead_status_id = '24510406'; //id этапа продаж, куда помещать сделку
+//$lead_status_id = '2245699'; //id этапа продаж, куда помещать сделку
+
 
 //АВТОРИЗАЦИЯ
 $user=array(
@@ -196,11 +188,10 @@ $leads['request']['leads']['add']=array(
     // 'responsible_user_id' => $responsible_user_id, //id ответственного по сделке
     //'date_create'=>1298904164, //optional
     // 'price'=>$totalPrice, #Полная стоимость заказа 
+    'pipeline_id' => 2245699,
     'tags' => 'с сайта квиз', #Теги
     'custom_fields'=>array(
       
-      /*Товар 1*/
-
       array(
         "id"=>697941,   
         "values"=> array(
@@ -209,10 +200,8 @@ $leads['request']['leads']['add']=array(
           )
         )
       ),
-
-      /*Номер заказа*/
       array(
-        "id"=>264055,   
+        "id"=>697981,   
         "values"=> array(
           array(
             "value"=>$question2
@@ -221,7 +210,7 @@ $leads['request']['leads']['add']=array(
       ),
 
       array(
-        "id"=>264059,   
+        "id"=>697983,   
         "values"=> array(
           array(
             "value"=>$question3
@@ -230,7 +219,7 @@ $leads['request']['leads']['add']=array(
       ),
 
       array(
-        "id"=>264061,   
+        "id"=>697985,   
         "values"=> array(
           array(
             "value"=>$question4
@@ -239,7 +228,7 @@ $leads['request']['leads']['add']=array(
       ),
 
       array(
-        "id"=>264063,   
+        "id"=>697987,   
         "values"=> array(
           array(
             "value"=>$question5
@@ -247,6 +236,14 @@ $leads['request']['leads']['add']=array(
         )
       ),
 
+      array(
+        "id"=>697991,   
+        "values"=> array(
+          array(
+            "value"=>$consult
+          )
+        )
+      ),
 
 
 
@@ -338,7 +335,7 @@ if(is_array($Response['response']['leads']['add']))
 
 //ДОБАВЛЕНИЕ КОНТАКТА
 $contact = array(
-  'name' => $contact_name,
+  'name' => $contact_name2,
   'linked_leads_id' => array($lead_id), //id сделки
   'responsible_user_id' => $responsible_user_id, //id ответственного
   'custom_fields'=>array(

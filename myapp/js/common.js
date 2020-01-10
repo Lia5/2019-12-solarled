@@ -81,6 +81,11 @@ $(function() {
 
             
         });
+        // for radiobuttons
+        $('input[type="radio"]+.pick-item__label').click(function(e){
+            $(this).parent().parent().parent('.step-slide').removeClass('step-slide--active').next().addClass('step-slide--active');           
+        });
+
         $(".qa-prev").click(function(e) {
             e.preventDefault();
             $(this).parent().parent('.step-slide').removeClass('step-slide--active').prev().addClass('step-slide--active');
@@ -94,14 +99,40 @@ $(function() {
         //popup
         $(".modal-open").click(function (e){
           e.preventDefault();
-          var numModal = $(this).attr('href');
-          var modal =  $(numModal);
-          modalWrap.removeClass('fadeOutUp');
-          modalWrap.addClass('fadeInDown');
-          modal.removeClass('disabled');
-          modal.addClass('flex');
-          $('body').addClass('body-modal-open');
-          // body.addClass('body-modal');
+          var btn = $(this);
+            $($(this).parent().parent()).each(function () {
+                var form = $(this);
+                form.find('.rfield').addClass('empty_field');
+
+                   // Функция проверки полей формы
+
+                    form.find('.rfield').each(function(){
+                    if($(this).val() != ''){
+                        // Если поле не пустое удаляем класс-указание
+                    $(this).removeClass('empty_field');
+
+                    if (!form.find('.empty_field').length) {
+                        var numModal = btn.attr('href');
+                        var modal =  $(numModal);
+                        modalWrap.removeClass('fadeOutUp');
+                        modalWrap.addClass('fadeInDown');
+                        modal.removeClass('disabled');
+                        modal.addClass('flex');
+                        $('body').addClass('body-modal-open');
+                        // body.addClass('body-modal');
+                        }
+                    } else {
+                        // Если поле пустое добавляем класс-указание
+                    $(this).addClass('empty_field');
+                    }
+                    });
+
+                
+
+
+            })
+            
+          
         });
       
         $('.modal-close').click(function (){
@@ -159,29 +190,20 @@ $(function() {
 
         //click on form submit button
     $('.kviz__btn').on('click', function(){
-	// jQuery(document).on("click",".kviz__btn" , function(e){
-		// e.preventDefault();
-		// var parentFieldset = jQuery(this).parents('.wizard-fieldset');
-		// var cansend = true;
-		// parentFieldset.find('.wizard-required').each(function() {
-		// 	var thisValue = jQuery(this).val();
-		// 	if( thisValue == "" ) {
-		// 		jQuery(this).siblings(".wizard-form-error").slideDown();
-		// 		cansend = false;
-		// 	}
-		// 	else {
-		// 		jQuery(this).siblings(".wizard-form-error").slideUp();
-		// 		cansend = true;
-		// 	}
-		// });
-		
-		// if ( cansend === true) {
-			// if(jQuery('#quizForm').length) {
-				console.log('form');
-                form = $('#quizForm');
-                var th = $(this);
-                console.log(th);
-                console.log(form);
+        $($(this).parent().parent()).each(function () {
+            var form = $(this);
+            form.find('.rfield').addClass('empty_field');
+
+                // Функция проверки полей формы
+
+                form.find('.rfield').each(function(){
+                if($(this).val() != ''){
+                    // Если поле не пустое удаляем класс-указание
+                $(this).removeClass('empty_field');
+
+                if (!form.find('.empty_field').length) {
+                console.log('form');
+                form = $('.quizForm');
                 jQuery.ajax({
                     method: "POST",
                     data: form.serialize(),
@@ -189,14 +211,18 @@ $(function() {
                     url: '../sendamo.php',
                     dataType: "json",
                     success: function (json) {
-						// if (json.success) {
+                        // if (json.success) {
                             // jQuery(".wizard-section").fadeOut(100);
-							window.location.href = "/quiz-thanks/";
-						// }
+                            window.location.href = "/quiz-thanks/";
+                        // }
                     }
-				});
-				
-			// } 
-		// }
-	});
+                });
+                }
+
+                } else {}
+                });
+        })
+    });
+
+
 });

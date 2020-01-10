@@ -1,15 +1,22 @@
 .header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
     padding: 17px 0;
+    background: #fff;
     @media screen and (max-width: 820px) {
         padding: 7px 0;
     }
     .wrap {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__social {
+        display: flex;
+        align-items: center;
         a {
-            padding: 30px;
+            padding: 5px 30px;
             font-weight: 500;
             color: #333;
             @media screen and (max-width: 820px) {
@@ -26,11 +33,13 @@
         }
     }
     .logo {
+        width: 150px;
+        img {
+            width: 100%;
+        }
         @media screen and (max-width: 820px) {
             max-width: 80px;
-            img {
-                width: 100%;
-            }
+            
         }
     }
 }

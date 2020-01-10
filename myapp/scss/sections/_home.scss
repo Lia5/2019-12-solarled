@@ -3,7 +3,7 @@
     background: url('../img/home-bg.jpg') no-repeat;
     background-size: cover;
     overflow: hidden;
-    padding: 129px 0 100px;
+    padding: 203px 0 100px;
     @media screen and (max-width: 820px) {
         padding-bottom: 60%;
     }
@@ -13,7 +13,7 @@
     &:before {
         content: url('../img/home-bg-right.png');
         position: absolute;
-        top: 0;
+        top: 74px;
         right: 0;
         @media screen and (max-width: 1226px) {
             content: none;

@@ -240,3 +240,12 @@
     padding: 31px;
     width: 100%;
 }
+.form input {
+    &.rfield {
+        border: 1px solid transparent;
+    }
+    &.empty_field {
+        border: 1px solid red;
+    }
+
+}
