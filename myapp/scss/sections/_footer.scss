@@ -64,6 +64,9 @@
         display: inline-block;
         width: 56px;
         margin-left: 20px;
+        &:hover {
+            opacity: 0.5;
+        }
         @media screen and (max-width: 520px) {
             margin-left: 0;
         }
