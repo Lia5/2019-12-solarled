@@ -57,9 +57,9 @@ function CheckCurlResponse($code)
 }
 
 
-$contact_name2       = filter_var ($_REQUEST['name2']);
+$contact_name2       = filter_var ($_REQUEST['name2']). filter_var ($_REQUEST['name_cont']);
 $contact_name       = filter_var ($_REQUEST['fname']);
-$contact_phone      = filter_var ($_REQUEST['phone'],FILTER_SANITIZE_NUMBER_FLOAT);
+$contact_phone      = filter_var ($_REQUEST['phone'],FILTER_SANITIZE_NUMBER_FLOAT).  filter_var ($_REQUEST['phone_cont'],FILTER_SANITIZE_NUMBER_FLOAT);
 
 $question1 	= filter_var ($_REQUEST['question1']);
 $question2 	= filter_var ($_REQUEST['question2']);
@@ -67,7 +67,9 @@ $question3 	= filter_var ($_REQUEST['question3']);
 $question4 	= filter_var ($_REQUEST['question4']);
 $question5  = filter_var ($_REQUEST['question5']);
 $consult  = filter_var ($_REQUEST['consult']);
-
+if (!filter_var ($_REQUEST['name_cont'])) {
+  $consult = '';
+}
 
 
 $utm_source = $_POST['utm_source']; if ($utm_source == '') { $utm_source = '-'; }
