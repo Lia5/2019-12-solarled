@@ -217,6 +217,7 @@ $(function() {
                         // }
                     }
                 });
+                fbq('track', 'Lead');
                 }
 
                 } else {}
