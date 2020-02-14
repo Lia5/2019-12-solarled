@@ -102,9 +102,6 @@ ul,li {
 		font-weight: 400;
 		display: block;
 		color: $accent2;
-		@media screen and (max-width: 731px) {
-			font-size: 21px;
-		}
 	}
 	@media screen and (max-width: 1875px) {
 		max-width: 750px;

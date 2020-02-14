@@ -49,6 +49,10 @@
         span {
             font-size: 30px;
             padding-top: 20px;
+
+            @media screen and (max-width: 731px) {
+                font-size: 21px;
+            }
         }
     }
     &__body {
