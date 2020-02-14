@@ -113,3 +113,8 @@
         }
     }
 }
+.desctop-br {
+    @media screen and (max-width: 383px) {
+        display: inline;
+    }
+}
