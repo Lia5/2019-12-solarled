@@ -99,14 +99,14 @@ ul,li {
 	font-size: 50px;
 	line-height: 1.2;
 	span {
+		font-weight: 400;
 		display: block;
 		color: $accent2;
-		@media screen and (max-width: 565px) {
-			display: inline;
-			padding-left: 7px;
-		}
 	}
-	@media screen and (max-width: 565px) {
+	@media screen and (max-width: 731px) {
+		font-size: 32px;
+	}
+	@media screen and (max-width: 620px) {
 		font-size: 26px;
 		line-height: 30px;
 	}
