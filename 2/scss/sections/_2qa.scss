@@ -1,0 +1,35 @@
+.qa {
+    padding-bottom: 95px;
+    @media screen and (max-width: 565px) {
+        padding-bottom: 61px;
+    }
+    &__title {
+        max-width: 778px;
+        span {
+            color: #ffc905;
+        }
+    }
+    &__subtitle {
+        position: relative;
+        padding-left: 68px;
+        margin-top: 44px;
+        @media screen and (max-width: 565px) {
+            padding-left: 42px;
+            margin-top: 36px;
+            max-width: 220px;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 48px;
+            height: 1px;
+            background: #333;
+            @media screen and (max-width: 565px) {
+                width: 31px;
+                height: 3px;
+            }
+        }
+    }
+}

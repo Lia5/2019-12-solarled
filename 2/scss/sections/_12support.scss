@@ -1,0 +1,143 @@
+.support {
+    &__qa {
+        position: relative;
+        overflow: hidden;
+        padding: 118px 0;
+        background: url('../img/green-bg.jpg') no-repeat;
+        background-size: cover;
+        @media screen and (max-width: 520px) {
+            padding: 53px 0 64px;
+        }
+
+        &-text {
+            width: 50%;
+            padding: 0 3% 0 4%;
+            color: #fcfcfc;
+            @media screen and (max-width: 600px) {
+                width: 100%;
+                margin-top: 30px;
+                padding-left: 0;
+            }
+        }
+        .wrap {
+            padding-left: 9%;
+            display: flex;
+            @media screen and (max-width: 600px) {
+                flex-wrap: wrap;
+            }
+            @media screen and (max-width: 520px) {
+                padding-left: 12px;
+                padding-right: 4px;
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: -90px;
+            left: 7%;
+            width: 404px;
+            height: 409px;
+            background: url('../img/sun-left.png') no-repeat;
+            background-size: contain;
+            @media screen and (max-width: 1834px) {
+                width: 20%;
+                left: 1%;
+            }
+            @media screen and (max-width: 820px) {
+                display: none;
+            }
+        }
+        &+.wrap {
+            padding: 125px 0 190px;
+            max-width: 1229px;
+
+            @media screen and (max-width: 820px) {
+                padding: 100px 12px 50px;
+            }
+            @media screen and (max-width: 520px) {
+                padding: 60px 12px 50px;
+            }
+        }
+    }
+    &__title {
+        color: #fff;
+        width: 50%;
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+        span {
+            color: #ffc905;
+        }
+    }
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width: 820px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__attention {
+        position: relative;
+        padding-left: 58px;
+        color: #075057;
+        font-weight: 500;
+        @media screen and (max-width: 820px) {
+            margin-bottom: 20px;
+            padding-left: 68px;
+        }
+        @media screen and (max-width: 520px) {
+            padding-left: 0;
+            padding-top: 49px;
+            margin-bottom: 35px;
+        }
+        &:before {
+            content: url(../img/icons/support.png);
+            position: absolute;
+            top: 11px;
+            
+            left: -13px;
+            @media screen and (max-width: 1298px) {
+                left: 0;
+            }
+            @media screen and (max-width: 820px) {
+                top: -17px;
+                left: 5px;
+            }
+        }
+    }
+    &__text {
+        font-size: 14px;
+        width: 98%;
+        padding: 0 0 0 0;
+        @media screen and (max-width: 820px) {
+            margin-bottom: 20px;
+        }
+        @media screen and (max-width: 520px) {
+            font-size: 12px;
+            line-height: 20px;
+            margin-bottom: 55px
+        }
+        svg {
+            width: 20px;
+            fill: #075057;
+
+
+            @media screen and (max-width: 820px) {
+                display: none;
+            }
+
+        }
+    }
+    &__btn {
+        @media screen and (max-width: 820px) { 
+            width: 100%;
+            text-align: center;
+        }    
+        .btn {
+            @media screen and (max-width: 520px) {
+                padding: 12px 31px;
+            }
+        }   
+    }
+}
