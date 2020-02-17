@@ -89,115 +89,70 @@
     <section class="qa">
       <div class="wrap">
         <div class="title qa__title">Узнайте, станция какой комплектации подойдет именно вашему объекту <span>и как быстро она начнет приносить прибыль</span></div>
-        <div class="qa__subtitle">Для этого ответьте всего на 5 вопросов</div>
+        <!-- <div class="qa__subtitle">Для этого ответьте всего на 5 вопросов</div> -->
       </div>
     </section>
     <section id="kviz" class="kviz">
       <div class="wrap">
         <div class="kviz-qa">
-          <form class="quizForm">
-            <div class="step-slide step-slide--active">
-              <div class="step-slide__num"> <span>1</span>/5</div>
-              <div class="step-slide__title">Где именно вы хотите <br>установить станцию?</div>
-              <div class="kviz__ans question__ans--radio">
-                <label for="step1-1" class="pick-item">
-                  <input id="step1-1" type="radio" name="question1" value="На земле (наземной конструкции)" class="pick-item__input">
-                  <div class="pick-item__label">На земле (наземной конструкции)</div>
-                </label>
-                <label for="step1-2" class="pick-item">
-                  <input id="step1-2" type="radio" name="question1" value="На крыше (скатной, плоской)" class="pick-item__input">
-                  <div class="pick-item__label">На крыше (скатной, плоской) </div>
-                </label>
-                <label for="step1-3" class="pick-item">
-                  <input id="step1-3" type="radio" name="question1" value="Комбинированно" class="pick-item__input">
-                  <div class="pick-item__label">Комбинированно</div>
-                </label>
-              </div>
-              <div class="prev-next-container">
-                <div class="kviz__error"></div><a href="#" class="btn btn--orange btn-next qa-next">Далее</a>
-              </div>
-            </div>
-            <div class="step-slide">
-              <div class="step-slide__num"> <span>2</span>/5</div>
-              <div class="step-slide__title">Какая мощность подведенной к вашему <br>объекту линии электропередачи
-                <div class="step-slide__subtitle">(мощность в кВт вы можете посмотреть в договоре с вашей энергораспределительной компанией)</div>
-              </div>
-              <div class="kviz__ans question__ans--radio">
-                <label for="step2-1" class="pick-item">
-                  <input id="step2-1" type="radio" name="question2" value="Знаю сколько кВт, фаз" class="pick-item__input">
-                  <div class="pick-item__label">Знаю сколько кВт, фаз</div>
-                </label>
-                <label for="step2-2" class="pick-item">
-                  <input id="step2-2" type="radio" name="question2" value="Не знаю" class="pick-item__input">
-                  <div class="pick-item__label">Не знаю</div>
-                </label>
-              </div>
-              <div class="prev-next-container">
-                <div class="kviz__error"></div><a href="#" class="btn btn-prev qa-prev">Назад</a><a href="#" class="btn btn--orange btn-next qa-next">Далее</a>
-              </div>
-            </div>
-            <div class="step-slide">
-              <div class="step-slide__num"> <span>3</span>/5</div>
-              <div class="step-slide__title">Хотите ли вы быть обеспеченным <br>электроэнергией, даже когда нет внешней сети?</div>
-              <div class="kviz__ans question__ans--radio">
-                <label for="step3-1" class="pick-item">
-                  <input id="step3-1" type="radio" name="question3" value="Нет, хочу просто зарабатывать  на зеленом тарифе" class="pick-item__input">
-                  <div class="pick-item__label">Нет, хочу просто зарабатывать  на зеленом тарифе</div>
-                </label>
-                <label for="step3-2" class="pick-item">
-                  <input id="step3-2" type="radio" name="question3" value="Да, знаю собственное потребление, а значит понимаю сколько нужно запасать" class="pick-item__input">
-                  <div class="pick-item__label">Да, знаю собственное потребление, а значит понимаю сколько нужно запасать</div>
-                </label>
-                <label for="step3-3" class="pick-item">
-                  <input id="step3-3" type="radio" name="question3" value="Да, но не понимаю сколько нужно запасать" class="pick-item__input">
-                  <div class="pick-item__label">Да, но не понимаю сколько нужно запасать</div>
-                </label>
-              </div>
-              <div class="prev-next-container">
-                <div class="kviz__error"></div><a href="#" class="btn btn-prev qa-prev">Назад</a><a href="#" class="btn btn--orange btn-next qa-next">Далее</a>
-              </div>
-            </div>
-            <div class="step-slide">
-              <div class="step-slide__num"> <span>4</span>/5</div>
-              <div class="step-slide__title">Знаете ли вы площадь и ориентацию <br>скатов крыши?</div>
-              <div class="kviz__ans question__ans--radio">
-                <label for="step4-1" class="pick-item">
-                  <input id="step4-1" type="radio" name="question4" value="Знаю площадь и примерно ориентацию по сторонам света" class="pick-item__input">
-                  <div class="pick-item__label">Знаю площадь и примерно ориентацию по сторонам света</div>
-                </label>
-                <label for="step4-2" class="pick-item">
-                  <input id="step4-2" type="radio" name="question4" value="Знаю площадь, ориентации не знаю, но могу указать адрес" class="pick-item__input">
-                  <div class="pick-item__label">Знаю площадь, ориентации не знаю, но могу указать адрес</div>
-                </label>
-                <label for="step4-3" class="pick-item">
-                  <input id="step4-3" type="radio" name="question4" value="Не знаю ничего, но есть чертежи (проект) дома" class="pick-item__input">
-                  <div class="pick-item__label">Не знаю ничего, но есть чертежи (проект) дома</div>
-                </label>
-                <label for="step4-4" class="pick-item">
-                  <input id="step4-4" type="radio" name="question4" value="Не знаю ничего, нужен  выезд специалиста" class="pick-item__input">
-                  <div class="pick-item__label">Не знаю ничего, нужен  выезд специалиста</div>
-                </label>
-              </div>
-              <div class="prev-next-container">
-                <div class="kviz__error"></div><a href="#" class="btn btn-prev qa-prev">Назад</a><a href="#" class="btn btn--orange btn-next qa-next">Далее</a>
-              </div>
-            </div>
-            <div class="step-slide">
-              <div class="step-slide__num"> <span>5</span>/5</div>
-              <div class="step-slide__title">Знаете ли вы, что нужно для <br>подключения “зеленого тарифа”?</div>
-              <div class="kviz__ans question__ans--radio">
-                <label for="step5-1" class="pick-item">
-                  <input id="step5-1" type="radio" name="question5" value="Да, но есть вопросы по процедурам и/или нормам закона" class="pick-item__input">
-                  <div class="pick-item__label">Да, но есть вопросы по процедурам и/или нормам закона</div>
-                </label>
-                <label for="step5-2" class="pick-item">
-                  <input id="step5-2" type="radio" name="question5" value="Нет, объясните (мощность линии, требования к счетчику, нормы закона)" class="pick-item__input">
-                  <div class="pick-item__label">Нет, объясните (мощность линии, требования к счетчику, нормы закона)</div>
-                </label>
-              </div>
-              <div class="prev-next-container">
-                <div class="kviz__error"></div><a href="#" class="btn btn-prev qa-prev">Назад</a><a href="#" class="btn btn--orange btn-next qa-next">Далее</a>
-              </div>
+          <form class="quizForm" id="form139593504">
+            <div class="kviz-calc">
+
+              <link rel="stylesheet" href="https://panterok.net/calc/jquery-ui.css">
+              
+              <style>
+              .t778__btn-wrapper_absolute {position: relative;}
+              .sliders-option {
+                  max-width:400px; 
+                  font-family: 'Roboto',Arial,sans-serif;
+                  font-weight: 400;
+                  color: #000;
+                  font-size: 18px;
+                  line-height: 1.55;
+                  margin: 0 auto;
+              }
+              .slider-group {margin-bottom: 30px;}
+              #slider-power {cursor: pointer;}
+              #slider-power .ui-widget-header, #slider-saving .ui-widget-header {background: #faf44b;}
+              #section_calculator .ui-slider .ui-slider-handle {cursor: pointer;}
+              .ui-state-default, .ui-widget-content .ui-state-default {background-color: #faf44b !important; border-radius: 50%;  outline: none;}
+              #slider-power .ui-slider-handle .amount, #slider-saving .ui-slider-handle .amount {
+                position: absolute;
+                top: 15px;
+                right: -6px;
+                color: #074e2d;
+                font-size: 19px;
+                padding: 3px 0;
+                text-align: center;
+                width: 30px;
+                font-family: ubuntu-regular;
+              }
+              #slider-power span, .slider-info-money span, .slider-info-saving span, .slider-info-generation span, .slider-info-square span, .slider-info-power span {font-weight: 700; }
+              </style>
+              <div class="sliders-option" id="data-for-form">
+              
+                                    <div class="slider-group">
+                                        <p>Стоимость СЭС, дол. США:</p>
+                                        <div id="slider-power" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;"></div><span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span></div>
+                                    </div>
+              
+                                    <div class="slider-info-money">
+                                        <p>Годовые выплаты по ЗТ, дол. США: <span>3150</span></p>
+                                    </div>
+                                    <div class="slider-info-power">
+                                        <p>Примерный срок окупаемости: <span>3.4</span> лет</p>
+                                    </div>
+                                    <div class="slider-info-saving">
+                                        <p>Мощность СЭС:    <span>15</span> кВТ</p>
+                                    </div>
+                                    <div class="slider-info-generation">
+                                        <p>Годовая генерация СЭС: <span>18000</span> квт/ч</p>
+                                    </div>
+                                    <div class="slider-info-square">
+                                        <p>Необходимая площадь: <span>90</span> кв.м.</p>
+                                    </div>
+                                </div>
+
             </div>
             <div class="step-slide step-slide--finish">
               <div class="step-slide__left">
@@ -205,6 +160,13 @@
                 <p>Мы уже анализируем ваши ответы. В ближайшее время наш менеджер свяжется с вами и предложит оптимальную комплектацию станции, расскажет, какой бюджет установки и как скоро вы сможете зарабатывать на “зеленом тарифе”.</p>
               </div>
               <div class="form step-slide__form">
+                  <input type="hidden" name="cost" tabindex="-1" value="5850">
+                  <input type="hidden" name="annual_payments" tabindex="-1" value="1550">
+                  <input type="hidden" name="term" tabindex="-1" value="4">
+                  <input type="hidden" name="power" tabindex="-1" value="8">
+                  <input type="hidden" name="annual_generation" tabindex="-1" value="9000">
+                  <input type="hidden" name="area" tabindex="-1" value="42">
+
                 <input type="text" placeholder="Имя" name="name2" required class="rfield name-icon">
                 <input type="text" placeholder="Телефон" name="phone" required class="rfield phone-mask">
                 <button type="submit" class="btn btn--orange"><a href="#modalKviz" class="modal-open kviz__btn">Получить предложение</a></button>
@@ -894,8 +856,78 @@
       </div>
     </footer>
     <script src="libs/1.jquery/dist/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="https://panterok.net/calc/core.min.js" charset="utf-8"></script>
+      <script src="https://panterok.net/calc/mouse.min.js" charset="utf-8"></script>
+      <script src="https://panterok.net/calc/widget.min.js" charset="utf-8"></script>
+      <script type="text/javascript" src="https://panterok.net/calc/slider.min.js"></script>
     <script src="js/scripts.min.js"></script>
-    <script src="js/common.js"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+          var solar_info = {0: ["4200", "1050", "4.2", "5 ", "6000", "30"],
+          1: ["5850", "1550", "4", "8", "9000", "42"],
+          2: ["6900", "2100", "3.8", "10", "12000", "60"],
+          3: ["8600", "2600", "3.6", "12", "14500", "70"],
+          4: ["9700", "3150", "3.4", "15", "18000", "90"],
+          5: ["12300", "4100", "3.2", "20", "24000", "120"],
+          6: ["15500", "5250", "3.1", "25", "30000", "150"],
+          7: ["18300", "6300", "2.8", "30", "36000", "180"]
+        };
+          console.log(solar_info);
+          // Slider price
+          var sliderAmountMap = [];
+          jQuery.each(solar_info, function (index, value) {
+              sliderAmountMap.push( value[0] );
+          });
+        console.log(sliderAmountMap);
+        function change_solar_value( slider_val ){
+          jQuery.each(solar_info, function (index, value) {
+            if(slider_val == value[0]){
+              $('.sliders-option .slider-info-money span').text('$' + value[1]);
+              $('.sliders-option .slider-info-power span').text(value[2]);
+              $('.sliders-option .slider-info-saving span').text(value[3]);
+              $('.sliders-option .slider-info-generation span').text(value[4]);
+              $('.sliders-option .slider-info-square span').text(value[5]);
+        
+              $('#form139593504 input[name="cost"]').val(slider_val);
+              $('#form139593504 input[name="annual_payments"]').val(value[1]);
+              $('#form139593504 input[name="term"]').val(value[2]);
+              $('#form139593504 input[name="power"]').val(value[3]);
+              $('#form139593504 input[name="annual_generation"]').val(value[4]);
+              $('#form139593504 input[name="area"]').val(value[5]);
+              }
+          });
+        }
+          change_solar_value( sliderAmountMap[1] );
+        
+          $( "#slider-power" ).slider({
+              range: "min",
+              value: 2,
+              min: 0,
+              max: sliderAmountMap.length-1,
+              step: 1,
+              slide: function( event, ui ) {
+                  $( "#slider-power" ).find('.ui-slider-handle').find('.amount').text(sliderAmountMap[ui.value]);
+                  change_solar_value( sliderAmountMap[ui.value] );
+              },
+              create: function(event, ui) {
+                  var v = sliderAmountMap[$(this).slider('value')];
+                  $(this).find('.ui-slider-handle').append('<div class="amount">'+v+'</div>');
+              }
+          });
+        
+        
+        }
+        );
+        
+        $('#rec139593504 .t-container_flex .t-col_6 .t700__contentbox').remove();
+        var form_data_container = $('#data-for-form');
+        // $('#data-for-form').remove();
+        $('#rec139593504 .t-container_flex .t-col_6').append(form_data_container);
+        
+        </script>
+        <script src="js/common.js"></script>
   </body>
   <!-- END body-->
 </html>

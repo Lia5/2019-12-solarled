@@ -208,7 +208,7 @@ $(function() {
                     method: "POST",
                     data: form.serialize(),
                     // url: quizAjax.url,
-                    url: '../sendamo.php',
+                    url: '../2/sendamo2.php',
                     dataType: "json",
                     success: function (json) {
                         // if (json.success) {
